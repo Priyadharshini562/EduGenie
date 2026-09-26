@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduGenie | Smart Learning Assistant</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">Edu<span>Genie</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#study">Study Tools</a>
+    </nav>
+    <span id="apiStatus" class="status">Checking AI...</span>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="eyebrow">SMART EDUCATIONAL LEARNING ASSISTANT</p>
+        <h1>Learn smarter.<br><span>Study better.</span></h1>
+        <p class="hero-copy">Ask questions, generate practice quizzes, save notes and plan your study sessions in one simple place.</p>
+        <a class="button" href="#study">Start Learning</a>
+      </div>
+      <div class="hero-card">
+        <div class="orb">✦</div>
+        <h3>AI-powered learning</h3>
+        <p>Personalized explanations and practice when you need them.</p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">FEATURES</p>
+        <h2>Everything for everyday study</h2>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">📝</div><h3>Quick Notes</h3><p>Save important study points and revise them later.</p></article>
+        <article class="card"><div class="icon">🧠</div><h3>Ask EduGenie</h3><p>Get clear AI explanations for academic questions.</p></article>
+        <article class="card"><div class="icon">🎯</div><h3>AI Quiz</h3><p>Generate practice questions from any topic.</p></article>
+        <article class="card"><div class="icon">📅</div><h3>Planner</h3><p>Keep your upcoming study tasks organized.</p></article>
+      </div>
+    </section>
+
+    <section id="study" class="section study-grid">
+      <div class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">AI ASSISTANT</p><h2>Ask EduGenie</h2></div>
+        </div>
+        <textarea id="question" placeholder="Example: Explain photosynthesis in simple words..."></textarea>
+        <button class="button" id="askBtn">Ask EduGenie</button>
+        <div id="answer" class="output empty">Your answer will appear here.</div>
+      </div>
+
+      <div class="panel">
+        <div><p class="eyebrow">PRACTICE</p><h2>Generate Quiz</h2></div>
+        <input id="quizTopic" placeholder="Topic, e.g. JavaScript">
+        <div class="row">
+          <select id="difficulty">
+            <option>easy</option><option selected>medium</option><option>hard</option>
+          </select>
+          <input id="quizCount" type="number" min="1" max="10" value="5">
+        </div>
+        <button class="button" id="quizBtn">Generate Quiz</button>
+        <div id="quizOutput" class="output empty">Your quiz will appear here.</div>
+      </div>
+
+      <div class="panel">
+        <div><p class="eyebrow">ORGANIZE</p><h2>Quick Notes</h2></div>
+        <input id="noteTitle" placeholder="Note title">
+        <textarea id="noteContent" placeholder="Write your note..."></textarea>
+        <button class="button" id="saveNoteBtn">Save Note</button>
+        <div id="notesList"></div>
+      </div>
+
+      <div class="panel">
+        <div><p class="eyebrow">PLAN</p><h2>Study Planner</h2></div>
+        <div class="row">
+          <input id="task" placeholder="Study task">
+          <input id="taskDate" type="date">
+        </div>
+        <button class="button" id="addTaskBtn">Add Task</button>
+        <div id="plannerList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>EduGenie</strong> · Smart Educational Learning Assistant
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
